@@ -353,6 +353,10 @@ public Action AdminCmd_PluginManage(int client, int argc) {
 			}
 		}
 	}
+	
+	// 버퍼 오버플로우 방지
+	ServerExecute();
+	
 	delete plugins;
 	return Plugin_Handled;
 }
